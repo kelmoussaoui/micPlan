@@ -30,12 +30,6 @@ jobs:
         # --onedir crée un dossier complet avec toutes les dépendances
         # --onefile crée un seul .exe mais incomplet pour Streamlit
     
-    - name: Upload executable
-      uses: actions/upload-artifact@v4
-      with:
-        name: micPlan-Windows
-        path: dist/micPlan.exe
-    
     - name: Create portable package
       run: |
         mkdir micPlan_portable
@@ -51,3 +45,9 @@ jobs:
       with:
         name: micPlan-Portable-Windows
         path: micPlan_portable.zip
+    
+    - name: Upload executable folder
+      uses: actions/upload-artifact@v4
+      with:
+        name: micPlan-Complete-Folder
+        path: dist/micPlan
