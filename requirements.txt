@@ -1,0 +1,33 @@
+# Requirements pour MicPlan - Application portable avec SQLite
+
+# Framework principal
+streamlit==1.28.1
+pandas==2.1.3
+numpy==1.25.2
+
+# Base de données SQLite (inclus avec Python)
+# sqlite3 est inclus dans Python standard
+
+# Utilitaires
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Gestion des mots de passe
+passlib[bcrypt]==1.7.4
+
+# Manipulation des dates
+datetime
+
+# Logging et configuration
+python-dotenv>=1.0.0
+
+# Gestion des fichiers et compression
+# gzip, shutil, os sont inclus dans Python standard
+
+# Interface utilisateur
+# streamlit gère déjà les composants UI
+
+# Tests (optionnel)
+pytest==7.4.3
+pytest-streamlit==0.1.0
+pyinstaller==6.1.0

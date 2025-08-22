@@ -1,0 +1,43 @@
+# .streamlit/config.toml
+# Configuration principale de micPlan
+
+[server]
+port = 8502
+address = "localhost"
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+# Optimisations de performance
+maxUploadSize = 200
+enableStaticServing = true
+
+[browser]
+# Ouvrir automatiquement le navigateur
+gatherUsageStats = false
+
+[theme]
+# Thème personnalisé pour une meilleure apparence
+primaryColor = "#1f77b4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#262730"
+font = "sans serif"
+
+[client]
+# Configuration client pour le développement
+showErrorDetails = true
+
+[runner]
+# Optimisations du runner
+magicEnabled = false
+
+[logger]
+# Configuration des logs pour la performance
+level = "error"
+messageFormat = "%(asctime)s %(message)s"
+
+# Configuration pour éviter les timeouts
+[global]
+developmentMode = false
+maxCachedMessageAge = 86400  # 24 heures
+showWarningOnDirectExecution = false
