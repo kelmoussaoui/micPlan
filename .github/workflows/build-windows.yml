@@ -26,7 +26,9 @@ jobs:
     
     - name: Build executable
       run: |
-        pyinstaller --clean --onefile --windowed --name micPlan run.py
+        pyinstaller --clean --onedir --windowed --name micPlan run.py
+        # --onedir crée un dossier complet avec toutes les dépendances
+        # --onefile crée un seul .exe mais incomplet pour Streamlit
     
     - name: Upload executable
       uses: actions/upload-artifact@v4
@@ -37,7 +39,8 @@ jobs:
     - name: Create portable package
       run: |
         mkdir micPlan_portable
-        copy dist\micPlan.exe micPlan_portable\
+        # Copier le dossier complet avec toutes les dépendances
+        xcopy dist\micPlan micPlan_portable\micPlan /E /I /H
         copy resources micPlan_portable\ -r
         copy Lancer_micPlan.bat micPlan_portable\
         copy README.txt micPlan_portable\

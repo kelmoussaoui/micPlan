@@ -6,7 +6,7 @@ echo.
 echo Lancement de l'application...
 echo.
 
-cd /d "%~dp0"
+cd /d "%~dp0micPlan"
 
 echo Demarrage du serveur micPlan...
 echo L'application s'ouvrira dans votre navigateur par defaut.
